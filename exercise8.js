@@ -10,8 +10,8 @@ const order = {
 };
 let a = order.cart.reduce(
   (accumulator, currentItem) => {
-    accumulator["total_money"] += currentItem.amount;
-    accumulator["total_amount"] += currentItem.price;
+    accumulator["total_amount"] += currentItem.amount;
+    accumulator["total_money"] += currentItem.price * currentItem.amount;
 
     return accumulator;
   },
